@@ -41,7 +41,6 @@ import AlertToast from 'components/commons/AlertToast'
 import ResetPassword from 'containers/ResetPassword'
 import SearchProtectionist from 'containers/SearchProtectionist/SearchProtectionist'
 import Asks from 'containers/Asks'
-import GoogleAnalytics from 'utils/GoogleAnalytics'
 import Navbar from 'components/commons/Navbar'
 import axiosInterceptors from './utils/axiosInterceptors'
 import historyBrowser from './history'
@@ -125,7 +124,6 @@ const App = () => {
             <Route component={PageNotFound} />
           </Switch>
         </Navbar>
-        <GoogleAnalytics />
       </Router>
     </UserContext.Provider>
   )
