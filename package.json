@@ -98,6 +98,7 @@
     "react-facebook": "^8.1.4",
     "react-geocode": "^0.2.1",
     "react-google-autocomplete": "^1.1.2",
+    "react-gtm-module": "^2.0.11",
     "react-helmet": "^6.1.0",
     "react-i18next": "^11.3.3",
     "react-icons": "^3.11.0",
