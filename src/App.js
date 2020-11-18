@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Router, Switch, Route } from 'react-router-dom'
 import ScrollMemory from 'react-router-scroll-memory'
 import PrivateRoute from 'routing/PrivateRoute'
+import TagManager from 'react-gtm-module'
 import {
   LOGIN,
   REGISTER,
@@ -51,6 +52,21 @@ dotenv.config()
 const rootStore = new RootStore()
 
 axiosInterceptors(rootStore)
+
+const tagManagerArgs = {
+  gtmId: process.env.REACT_APP_GA_TRACKING_ID,
+}
+
+TagManager.dataLayer({
+  dataLayer: {
+    event: 'pageview',
+    page: {
+      path: 'home',
+    },
+  },
+})
+
+TagManager.initialize(tagManagerArgs)
 
 const App = () => {
   const { t } = useTranslation()
