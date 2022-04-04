@@ -26,6 +26,7 @@ class Pet implements IPet {
   name;
   city;
   notes;
+  color;
   height;
   gender;
   images;
